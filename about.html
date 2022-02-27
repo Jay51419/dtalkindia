@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/about.css">
+    <title>About us</title>
+</head>
+
+<body>
+    <div class="ripple-wrapper">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <img id="logo" class="hoverable" src="assets/logo.png" alt="DTalkIndia">
+
+            <div class="menu-icon hoverable">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+        </nav>
+        <div class="menu">
+            <a class="hoverable"  href="/">Home</a>
+            <a class="hoverable"  href="./about.html">About us</a>
+            <a class="hoverable"  href="./services.html">Services</a>
+            <a class="hoverable"  href="#contact" onclick="toggleMenu()">Contact us</a>
+        </div>
+    </header>
+    <div class="whatsapp hoverable">
+        <a href="https://wa.me/919867588567" target="_blank">
+            <img src="assets/icons/whatsapp.svg" alt="">
+        </a>
+    </div>
+    <section class="about">
+        <div class="title">About us</div>
+        <div class="card">
+            <div data-aos="fade">
+                <img src="assets/1.jpg" alt="">
+            </div>
+            <div class="card-content" data-aos="fade-right">
+                <h1>Mehul Parmar</h1>
+                <h3>Design your dream space</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis architecto ipsam repellat
+                    iste eaque, asperiores culpa expedita sequi consequuntur, consequatur nemo nulla hic? Cumque,
+                    perspiciatis maxime at sequi molestiae ad.
+                </p>
+            </div>
+        </div>
+        <div class="card card-reverse">
+            <div data-aos="fade reverse-img">
+                <img src="assets/2.jpg" class="start-2" alt="">
+            </div>
+
+            <div class="card-content start-1 reverse-text" data-aos="fade-right">
+                <h1>Mehul Parmar</h1>
+                <h3>Design your dream space</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis architecto ipsam repellat
+                    iste eaque, asperiores culpa expedita sequi consequuntur, consequatur nemo nulla hic? Cumque,
+                    perspiciatis maxime at sequi molestiae ad.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="sc" data-aos="fade">
+        <div class="card">
+            <div class="content-wrapper">
+                <div class="content">
+                    <h3>Contact us</h3>
+                    <h4>+91 9867588567</h4>
+                    <p>
+                        D-22, Ground Floor, <br>
+                        Poddar Shopping Center, <br>
+                        S.V. Road, Kandivali (w), <br>
+                        Mumbai – 400067.
+                    </p>
+                    <p>info@dtalk.com</p>
+                    <div class="social hoverable">
+                        <img src="assets/icons/instagram 1.svg" alt="">
+                        <img src="assets/icons/facebook 1.svg" alt="">
+                        <img src="assets/icons/twitter 1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="map hoverable">
+                <img class="india" src="assets/map.png" alt="">
+
+            </div>
+        </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

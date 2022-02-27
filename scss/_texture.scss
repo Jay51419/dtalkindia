@@ -1,0 +1,12 @@
+.texture{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    left: 50%;
+    height: 100vh;
+    overflow:hidden ;
+    width: 50%;
+    mix-blend-mode: multiply;
+    filter: brightness(130%);
+}

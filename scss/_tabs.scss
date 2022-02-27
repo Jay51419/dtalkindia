@@ -1,0 +1,49 @@
+.tabs {
+    margin-top: 140px;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    justify-content: start;
+    display: flex;
+    overflow-x: auto;
+    flex-shrink: 0;
+    gap: 20px;
+    background-color: $color-overlay;
+    @media (min-width: $screen-md) {
+    justify-content: center;
+
+    }
+    .tab {
+        padding: 10px;
+        margin: 5px;
+        flex-shrink:0;
+        color: $color-base;
+        cursor: pointer;
+        border-radius: 20px;
+        &:hover {
+            color: $color-primary;
+        }
+        &-active {
+            background-color: $color-primary;
+            &:hover {
+                color: $color-text;
+            }
+        }
+    }
+}
+
+.tab-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1px;
+    align-items: start;
+    justify-items: center;
+    img {
+        max-width: 100%;
+    }
+    @media (min-width: $screen-md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/services.css">
+    <title>Services</title>
+</head>
+
+<body>
+    <div class="ripple-wrapper">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <img id="logo" class="hoverable" src="assets/logo.png" alt="DTalkIndia">
+
+            <div class="menu-icon hoverable">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+        </nav>
+        <div class="menu">
+            <a class="hoverable"  href="/">Home</a>
+            <a class="hoverable"  href="./about.html">About us</a>
+            <a class="hoverable"  href="./services.html">Services</a>
+            <a class="hoverable"  href="#contact" onclick="toggleMenu()">Contact us</a>
+        </div>
+    </header>
+    <div class="whatsapp hoverable">
+        <a href="https://wa.me/919867588567" target="_blank">
+            <img src="assets/icons/whatsapp.svg" alt="">
+        </a>
+    </div>
+    <div class="tabs" data-aos="fade-down">
+        <div id="interior-design" onclick="changeActiveTab(0)" class="tab tab-active hoverable">
+            <h3>
+                Interior Design
+            </h3>
+        </div>
+        <div id="brand-design" onclick="changeActiveTab(1)" class="tab hoverable">
+            <h3>
+                Brand Design
+            </h3>
+        </div>
+        <div id="turnkey-contract" onclick="changeActiveTab(2)" class="tab hoverable">
+            <h3>
+                Turnkey Contract
+            </h3>
+        </div>
+        <div id="design-consultance" onclick="changeActiveTab(3)" class="tab hoverable">
+            <h3>
+                Design Consultance
+            </h3>
+        </div>
+    </div>
+    <section class="tab-content">
+    </section>
+    <section class="sectors-available" data-aos="fade">
+        <div class="title">Sectors Available</div>
+        <div class="sectors-available-content">
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+            <span>Small office</span>
+            <span>Entrance lobby</span>
+            <span>Laboratory</span>
+            <span>Club House</span>
+            <span>Restaurants</span>
+            <span>Gymnasium</span>
+            <span>Exibition stall design</span>
+        </div>
+    </section>
+    <section class="additional-services" data-aos="fade">
+        <div class="title">Additional Services</div>
+        <div class="additional-services-content">
+            <span>Water proofing</span>
+            <span>Pop Contracting</span>
+            <span>Painting interior and Exterior work</span>
+            <span>Fabrication work</span>
+            <span>Carpentary Contracting</span>
+            <span>Electrical Contracting</span>
+            <span>Civil Contracting</span>
+        </div>
+    </section>
+    <section id="contact" class="sc" data-aos="fade">
+        <div class="card">
+            <div class="content-wrapper">
+                <div class="content">
+                    <h3>Contact us</h3>
+                    <h4>+91 9867588567</h4>
+                    <p>
+                        D-22, Ground Floor, <br>
+                        Poddar Shopping Center, <br>
+                        S.V. Road, Kandivali (w), <br>
+                        Mumbai – 400067.
+                    </p>
+                    <p>info@dtalk.com</p>
+                    <div class="social hoverable">
+                        <img src="assets/icons/instagram 1.svg" alt="">
+                        <img src="assets/icons/facebook 1.svg" alt="">
+                        <img src="assets/icons/twitter 1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="map hoverable">
+                <img class="india" src="assets/map.png" alt="">
+
+            </div>
+        </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script src="./js/services.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+    background-color: #25d366;
+    border-radius: 20px;
+    padding: 10px;
+    img {
+        height: 34px !important;
+        width: 34px !important;
+        animation-name: wiggle;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @media (min-width: $screen-md) {
+        bottom: 40px;
+        right: 40px;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

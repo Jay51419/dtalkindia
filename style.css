@@ -1,0 +1,174 @@
+
+
+*{
+    --primary:#c92700;
+    --dark:#121212;
+    --light:#fff;
+    
+}
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; 
+    background:var(--dark);
+    font-family: 'Playfair Display', serif;
+}
+
+h1{
+    margin: 0;
+}
+
+.bg-texture{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    left: 50%;
+    height: 100vh;
+    overflow:hidden ;
+    width: 50%;
+    mix-blend-mode: overlay;
+
+}
+
+
+section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: block;
+}
+nav{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px auto;
+
+}
+#logo{
+    height: 84px;
+    padding-left:40px ;
+}
+
+#menu{
+    height: 64px;
+    width: 64px;
+    padding-right: 40px;
+}
+
+
+
+.section-heading{
+    padding-top: 20px;
+    color: white;
+    font-size: 5rem;
+    mix-blend-mode: overlay;
+    text-align: center;
+}
+
+#hero{
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.hero-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+}
+
+#hero h1{
+    font-size: 4rem;
+    margin: 0;
+    color: white;
+    font-weight: 500;
+}
+#hero h3{
+    font-size: 1.2rem;
+    color: white;
+    margin:10px 0;
+    font-weight: 400;
+
+}
+#hero img{
+    height: 50vh;
+}
+
+#hero-bg{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -2;
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.primary-btn{
+    padding: 20px 40px;
+    background: var(--primary);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 0;
+    margin: 20px auto;    
+}
+.primary-btn:hover{
+    transition:all .3s;
+    background-color:#e1785e ;
+    transform: translateY(2px);
+
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: white;
+
+}
+.arrow{
+    height: 48px !important;
+    width: 48px;
+   object-fit: contain;
+}
+
+.swiper-button-next{
+    position: relative;
+    margin: 0 10px;
+}
+.swiper-button-prev{
+    position: relative;
+    margin: 0 10px;
+}
+
+
+@media   (max-width: 600px) {
+    #slider-img {
+        display: none;
+    }
+  }

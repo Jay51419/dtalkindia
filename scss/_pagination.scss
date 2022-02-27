@@ -1,0 +1,28 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: $color-base;
+    svg{
+        color: $color-fill;
+    }
+}
+
+.arrow {
+    height: 48px !important;
+    width: 48px;
+    object-fit: contain;
+}
+
+.swiper-button-next {
+    position: relative;
+    margin: 0;
+    padding-left: 10px;
+
+}
+.swiper-button-prev {
+    position: relative;
+    margin: 0;
+    padding-right: 10px;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>DTalkIndia</title>
+</head>
+
+<body>
+    <div class="ripple-wrapper">
+        <img src="./assets/logo.png" alt="">
+        <!-- <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div> -->
+    </div>
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <!-- <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg> -->
+        </div>
+
+        <div class="cursor__ball cursor__ball--small">
+            <!-- <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg> -->
+        </div>
+    </div>
+    <header>
+        <nav>
+            <img id="logo" class="hoverable" src="assets/logo.png" alt="DTalkIndia">
+
+            <div class="menu-icon hoverable">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+        </nav>
+        <div class="menu">
+            <a class="hoverable"  href="/">Home</a>
+            <a class="hoverable"  href="./about.html">About us</a>
+            <a class="hoverable"  href="./services.html">Services</a>
+            <a class="hoverable"  href="#contact" onclick="toggleMenu()">Contact us</a>
+        </div>
+    </header>
+    <div class="whatsapp hoverable">
+        <a href="https://wa.me/919867588567" target="_blank">
+            <img src="assets/icons/whatsapp.svg" alt="">
+        </a>
+    </div>
+    <section id="hero" class="hero swiper mySwiper">
+        <video class="hero-bg" src="assets/Hero-2-1.m4v" muted autoplay loop></video>
+
+        <div class="overlay"></div>
+        <div class="swiper-wrapper">
+            <div class="hero-card swiper-slide hoverable">
+                <div id="slider-content" data-aos="fade-right">
+                    <h1 id="slider-title">INTERIOR<br> DESIGN</h1>
+                    <h3 id="slider-subtitle">Design your dream space</h3>
+                    <a href="./services.html">
+                        <button class="btn btn-primary hoverable">More Details</button>
+                    </a>
+                    <div class="pagination">
+                        <img class="arrow left swiper-button-prev" src="assets/icons/left-arrow.svg" alt="">
+                        1/4
+                        <img class="arrow swiper-button-next" src="assets/icons/right-arrow.svg" alt="">
+                    </div>
+                </div>
+                <div id="slider-img" data-aos="zoom-in-left">
+                    <img class="hero-img" src="assets/1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide hero-card hoverable">
+                <div id="slider-content" data-aos="fade-right">
+                    <h1 id="slider-title">TURNKEY<br>CONTRACT</h1>
+                    <h3 id="slider-subtitle">Design your dream space</h3>
+                    <a href="./services.html">
+                        <button class="btn btn-primary hoverable">More Details</button>
+                    </a>
+                    <div class="pagination">
+                        <img class="arrow left swiper-button-prev" src="assets/icons/left-arrow.svg" alt="">
+                        2/4
+                        <img class="arrow swiper-button-next" src="assets/icons/right-arrow.svg" alt="">
+                    </div>
+                </div>
+                <div id="slider-img" data-aos="zoom-in-left">
+                    <img class="hero-img" src="assets/2.jpg" alt="">
+                </div>
+            </div>
+            <div class="hero-card swiper-slide hoverable">
+                <div id="slider-content" data-aos="fade-right">
+                    <h1 id="slider-title">BRAND<br>DESIGN</h1>
+                    <h3 id="slider-subtitle">Design your dream space</h3>
+                    <a href="./services.html">
+                        <button class="btn btn-primary hoverable">More Details</button>
+                    </a>
+                    <div class="pagination">
+                        <img class="arrow left swiper-button-prev" src="assets/icons/left-arrow.svg" alt="">
+                        3/4
+                        <img class="arrow swiper-button-next" src="assets/icons/right-arrow.svg" alt="">
+                    </div>
+                </div>
+                <div id="slider-img" data-aos="zoom-in-left">
+                    <img class="hero-img" src="assets/3.jpg" alt="">
+                </div>
+            </div>
+            <div class="hero-card swiper-slide hoverable">
+                <div id="slider-content" data-aos="fade-right">
+                    <h1 id="slider-title">DESIGN<br>CONSULTANCE </h1>
+                    <h3 id="slider-subtitle">Design your dream space</h3>
+                    <a href="./services.html">
+                        <button class="btn btn-primary hoverable">More Details</button>
+                    </a>
+                    <div class="pagination">
+                        <img class="arrow left swiper-button-prev" src="assets/icons/left-arrow.svg" alt="">
+                        4/4
+                        <img class="arrow swiper-button-next" src="assets/icons/right-arrow.svg" alt="">
+                    </div>
+                </div>
+                <div id="slider-img" data-aos="zoom-in-left">
+                    <img class="hero-img" src="assets/4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade" class="wcu wcu-swiper swiper">
+        <h1 class="title">Why choose us ?</h1>
+        <div class="swiper-wrapper ">
+            <div class="wcu-content swiper-slide hoverable">
+                <img class="wcu-img" src="assets/1.jpg" alt="">
+                <div class="wcu-card">
+                    <h3>
+                        ONE POINT <br> SOLUTIONS
+                    </h3>
+                    <p>
+                        We are one point solution of all <br>
+                        your designing & execution needs.
+                    </p>
+                    <button class="btn btn-primary hoverable">Contact us</button>
+
+                    <div class="pagination">
+                        <img class="arrow left wcu-prev" src="assets/icons/left-arrow-black.svg" alt="">
+                        1/4
+                        <img class="arrow wcu-next" src="assets/icons/right-arrow-black.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="wcu-content swiper-slide hoverable">
+                <img class="wcu-img" src="assets/2.jpg" alt="">
+                <div class="wcu-card">
+                    <h3>
+                        MODERN <br> DESIGN
+                    </h3>
+                    <p>
+                        We design to deliver in the most <br>
+                        modern way we can do.
+                    </p>
+                    <button class="btn btn-primary hoverable">Contact us</button>
+
+                    <div class="pagination">
+                        <img class="arrow left wcu-prev" src="assets/icons/left-arrow-black.svg" alt="">
+                        2/4
+                        <img class="arrow wcu-next" src="assets/icons/right-arrow-black.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="wcu-content swiper-slide hoverable">
+                <img class="wcu-img" src="assets/3.jpg" alt="">
+                <div class="wcu-card">
+                    <h3>
+                        NO QUALITY <br> COMPROMISE
+                    </h3>
+                    <p>
+                        We don’t compromise for the <br>
+                        quality of product/material we <br>
+                        use.
+                    </p>
+                    <button class="btn btn-primary hoverable">Contact us</button>
+
+                    <div class="pagination">
+                        <img class="arrow left wcu-prev" src="assets/icons/left-arrow-black.svg" alt="">
+                        3/4
+                        <img class="arrow wcu-next" src="assets/icons/right-arrow-black.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="wcu-content swiper-slide hoverable">
+                <img class="wcu-img" src="assets/4.jpg" alt="">
+                <div class="wcu-card">
+                    <h3>
+                        MAINTENANCE <br> SUPPORT
+                    </h3>
+                    <p>
+                        We give 100% maintenance <br>
+                        support to client with the lowest <br>
+                        DOWN TIME.Specially Electrical & <br>
+                        plumbing problem our Down time <br>
+                        is less than 3 years.
+                    </p>
+                    <button class="btn btn-primary hoverable">Contact us</button>
+
+                    <div class="pagination">
+                        <img class="arrow left wcu-prev" src="assets/icons/left-arrow-black.svg" alt="">
+                        4/4
+                        <img class="arrow wcu-next" src="assets/icons/right-arrow-black.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section data-aos="fade" class="work ">
+        <h1 class="title">Our work</h1>
+        <div class="swiper work-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hoverable"><img src="assets/1.jpg" alt=""></div>
+                <div class="swiper-slide hoverable"><img src="assets/2.jpg" alt=""></div>
+                <div class="swiper-slide hoverable"><img src="assets/3.jpg" alt=""></div>
+                <div class="swiper-slide hoverable"><img src="assets/4.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="show">
+            <a href="./services.html">
+                <button class="btn btn-primary hoverable">Show more</button>
+            </a>
+        </div>
+
+
+    </section>
+    <section data-aos="fade" id="contact" class="sc">
+        <h1 class="title">Still confused ?</h1>
+        <div class="card">
+            <div class="content-wrapper">
+                <div class="content">
+                    <h3>Contact us</h3>
+                    <h4>+91 9867588567</h4>
+                    <p>
+                        D-22, Ground Floor, <br>
+                        Poddar Shopping Center, <br>
+                        S.V. Road, Kandivali (w), <br>
+                        Mumbai – 400067.
+                    </p>
+                    <p>info@dtalk.com</p>
+                    <div class="social hoverable">
+                        <img src="assets/icons/instagram 1.svg" alt="">
+                        <img src="assets/icons/facebook 1.svg" alt="">
+                        <img src="assets/icons/twitter 1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <a
+                href="https://www.google.com/maps/place/DH+Associates/@19.1387828,72.7750974,12z/data=!3m1!4b1!4m5!3m4!1s0x3be7b62e0f12677f:0x5d1c9d90ff96fedd!8m2!3d19.1386339!4d72.8451379">
+                <div class="map hoverable">
+                    <img class="india" src="assets/map.png" alt="">
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            grabCursor: true,
+            speed: 2000,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        var wcuSwiper = new Swiper(".wcu-swiper", {
+            loop: true,
+            effect: "cards",
+            grabCursor: true,
+            speed: 1000,
+            cardsEffect: {
+                slideShadows: false
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: ".wcu-next",
+                prevEl: ".wcu-prev",
+            },
+        });
+        var workSwiper = new Swiper(".work-swiper", {
+            effect: "coverflow",
+            loop: true,
+            speed: 2000,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: true,
+            },
+        });
+    </script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

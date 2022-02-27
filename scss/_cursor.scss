@@ -1,0 +1,24 @@
+.cursor {
+    
+    pointer-events: none;
+    position: relative;
+    &__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: overlay;
+      z-index: 10000000;
+      background-color: black;
+      &--big{
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+      }
+      &--small{
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+      }
+    }      
+  } 
+

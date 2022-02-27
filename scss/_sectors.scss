@@ -1,0 +1,19 @@
+.sectors-available{
+    &-content{
+        display: grid;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+        font-size: 1rem;
+        @media (min-width: $screen-md) {
+        grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+        // span{
+        //     border-bottom:1px solid $color-smooth;
+        // }
+    }
+}
