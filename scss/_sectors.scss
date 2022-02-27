@@ -7,6 +7,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         justify-items: center;
+        text-align: center;
         font-size: 1rem;
         @media (min-width: $screen-md) {
         grid-template-columns: 1fr 1fr 1fr;
