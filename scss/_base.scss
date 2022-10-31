@@ -9,7 +9,7 @@ html {
 body {
     height:100%;
     margin:0;
-    overflow-x:hidden !important; 
+    overflow-x:hidden !important;
     background:$color-bg;
     color:$color-text;
 
@@ -22,9 +22,7 @@ body {
     -moz-osx-font-smoothing:grayscale;
 
 
-    background-image: url(../assets/texture.jpg);
-    background-repeat:repeat;
-    background-blend-mode: overlay;
+    background:url(../assets/texture.jpg);
 }
 
 ::-webkit-scrollbar {

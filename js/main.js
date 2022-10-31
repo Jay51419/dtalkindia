@@ -1,78 +1,36 @@
-AOS.init();
-window.addEventListener('load', AOS.refresh)
-window.onload = () =>{
+window.onload = () => {
+    document.querySelector(".scroll-wrapper").style.height = "100vh"
     ripple.classList.add("d-none")
 }
-let Extrapolate;
-(function (Extrapolate) {
-    Extrapolate[Extrapolate["extend"] = 0] = "extend";
-    Extrapolate[Extrapolate["clamp"] = 1] = "clamp";
-    Extrapolate[Extrapolate["clampStart"] = 2] = "clampStart";
-    Extrapolate[Extrapolate["clampEnd"] = 3] = "clampEnd";
-})(Extrapolate || (Extrapolate = {}));
+window.Scrollbar.init(document.querySelector(".scroll-wrapper"), {
+    damping: 0.07,
+    syncCallbacks: true,
+});
 
-class Interpolate {
-    constructor(inputRange, outputRage, extrapolate) {
-        this._x = inputRange;
-        this._y = outputRage;
-        this.extrapolate = extrapolate;
-    }
-    /// execute the interpolation in the range
-    /// if the interpolation is clamped the return value will not be extended
-    eval(val) {
-        if (val <= this._x[0]) {
-            if (this.extrapolate == Extrapolate.clampStart ||
-                this.extrapolate == Extrapolate.clamp) {
-                return this._y[0];
-            }
-            else {
-                return this._interpolateLine([this._x[0], this._x[1]], [this._y[0], this._y[1]], val);
-            }
-        }
-        else {
-            for (var i = 0; i < this._x.length; i++) {
-                if (val < this._x[i]) {
-                    return this._interpolateLine([this._x[i - 1], this._x[i]], [this._y[i - 1], this._y[i]], val);
-                }
-                if (val == this._x[i]) {
-                    return this._y[i];
-                }
-            }
-            if (val > this._x[this._x.length - 1]) {
-                if (this.extrapolate == Extrapolate.clamp ||
-                    this.extrapolate == Extrapolate.clampEnd) {
-                    return this._y[this._y.length - 1];
-                }
-                else {
-                    var i = this._x.length - 1;
-                    return this._interpolateLine([this._x[i - 1], this._x[this._x.length - 1]], [this._y[i - 1], this._y[this._y.length - 1]], val);
-                }
-            }
-        }
-        return 0;
-    }
-    _interpolateLine(x, y, val) {
-        var x0 = x[0];
-        var x1 = x[1];
-        var y0 = y[0];
-        var y1 = y[1];
-        var _val = y0 + (val - x0) * ((y1 - y0) / (x1 - x0));
-        return _val;
-    }
-}
+let offset ={x:0,y:0}
 
+let {y: prevScrollY} = Scrollbar.getAll()[0].offset
 
-
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector("header").style.top = "0";
+function toggleHeaderOnScroll(x, y) {
+    const header = document.querySelector("header")
+    header.style.left = x + 'px';
+    header.style.top = y + 'px';
+    let currentScrollPos = y;
+    if (prevScrollY > currentScrollPos) {
+        header.style.opacity = "1"
     } else {
-        document.querySelector("header").style.top = "-100px";
+        header.style.opacity = "0"
+
     }
-    prevScrollpos = currentScrollPos;
+    prevScrollY = currentScrollPos;
 }
+const whatsapp = document.querySelector(".whatsapp")
+Scrollbar.getAll()[0].addListener(function (status) {
+    offset = status.offset
+    toggleHeaderOnScroll(offset.x,offset.y,prevScrollY)
+
+})
+
 
 
 const menuIcon = document.querySelector(".menu-icon")
@@ -90,38 +48,36 @@ const $bigBall = document.querySelector('.cursor__ball--big');
 const $smallBall = document.querySelector('.cursor__ball--small');
 const $hoverables = document.querySelectorAll('.hoverable');
 
-// const tap = document.createElement("span")
-// tap.innerHTML = "Tap"
-// tap.classList.add("tap")
-
-// Listener
 document.body.addEventListener('mousemove', onMouseMove);
 for (let i = 0; i < $hoverables.length; i++) {
-    $hoverables[i].addEventListener('mouseenter',onMouseHover);
-    $hoverables[i].addEventListener('mouseleave',onMouseHoverOut);
+    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
 }
+
 
 // Move the cursor
 function onMouseMove(e) {
+    const x = e.clientX
+    const y = e.clientY + offset.y
     TweenMax.to($bigBall, .4, {
-        x: e.clientX - 15,
-        y: e.clientY - 15
+        x: x - 15,
+        y: y - 15
     })
     TweenMax.to($smallBall, .1, {
-        x: e.clientX - 5,
-        y: e.clientY - 7
+        x: x - 5,
+        y: y - 7
     })
 }
-
 
 
 // Hover an element
 function onMouseHover(e) {
     TweenMax.to($bigBall, .3, {
-       scale:5
+        scale: 5
     })
 
 }
+
 function onMouseHoverOut() {
     TweenMax.to($bigBall, .3, {
         scale: 1
@@ -129,13 +85,19 @@ function onMouseHoverOut() {
 }
 
 
-document.getElementById("logo").addEventListener("click", e => {
-    window.scrollTo(0, 0)
-})
-
-
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // some code..
     cursor[0].remove()
-    
+
 }
+
+
+const contactBtn = document.querySelector("#contactBtn")
+const contact = document.querySelector("#contact")
+contactBtn.addEventListener("click",()=>{
+    const contactY = contact.offsetTop
+    console.log(contactY)
+    menuIcon.classList.toggle("active")
+    menu.classList.toggle("menu-active")
+    Scrollbar.getAll()[0].scrollTo(0,contactY,500)
+})

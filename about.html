@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="scss/about.css">
     <title>About us</title>
 </head>
 
-<body>
+<body data-scrollbar style="height: 100vh;">
+<div class="whatsapp hoverable">
+    <a href="https://wa.me/919867588567" target="_blank">
+        <img src="assets/icons/whatsapp.svg" alt="">
+    </a>
+</div>
+<div class="scroll-wrapper">
     <div class="ripple-wrapper">
         <div class="lds-ripple">
             <div></div>
@@ -19,15 +24,9 @@
     </div>
     <div class="cursor">
         <div class="cursor__ball cursor__ball--big ">
-            <svg height="30" width="30">
-                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-            </svg>
         </div>
 
         <div class="cursor__ball cursor__ball--small">
-            <svg height="10" width="10">
-                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-            </svg>
         </div>
     </div>
     <header>
@@ -41,24 +40,20 @@
 
         </nav>
         <div class="menu">
-            <a class="hoverable"  href="/dtalkindia">Home</a>
-            <a class="hoverable"  href="./about.html">About us</a>
-            <a class="hoverable"  href="./services.html">Services</a>
-            <a class="hoverable"  href="#contact" onclick="toggleMenu()">Contact us</a>
+            <a class="hoverable" href="/dtalkindia">Home</a>
+            <a class="hoverable" href="./about.html">About us</a>
+            <a class="hoverable" href="./services.html">Services</a>
+            <a class="hoverable" id="contactBtn" href="#contact">Contact us</a>
         </div>
     </header>
-    <div class="whatsapp hoverable">
-        <a href="https://wa.me/919867588567" target="_blank">
-            <img src="assets/icons/whatsapp.svg" alt="">
-        </a>
-    </div>
+
     <section class="about">
         <div class="title">About us</div>
         <div class="card">
-            <div data-aos="fade">
+            <div>
                 <img src="assets/1.jpg" alt="">
             </div>
-            <div class="card-content" data-aos="fade-right">
+            <div class="card-content">
                 <h1>Mehul Parmar</h1>
                 <h3>Design your dream space</h3>
                 <p>
@@ -69,11 +64,11 @@
             </div>
         </div>
         <div class="card card-reverse">
-            <div data-aos="fade reverse-img">
+            <div>
                 <img src="assets/2.jpg" class="start-2" alt="">
             </div>
 
-            <div class="card-content start-1 reverse-text" data-aos="fade-right">
+            <div class="card-content start-1 reverse-text">
                 <h1>Mehul Parmar</h1>
                 <h3>Design your dream space</h3>
                 <p>
@@ -84,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="sc" data-aos="fade">
+    <section id="contact" class="sc">
         <div class="card">
             <div class="content-wrapper">
                 <div class="content">
@@ -106,18 +101,21 @@
             </div>
 
             <a
-            href="https://www.google.com/maps/place/DH+Associates/@19.1387828,72.7750974,12z/data=!3m1!4b1!4m5!3m4!1s0x3be7b62e0f12677f:0x5d1c9d90ff96fedd!8m2!3d19.1386339!4d72.8451379">
-            <div class="map hoverable">
-                <img class="india" src="assets/map.png" alt="">
-            </div>
-        </a>
+                    href="https://www.google.com/maps/place/DH+Associates/@19.1387828,72.7750974,12z/data=!3m1!4b1!4m5!3m4!1s0x3be7b62e0f12677f:0x5d1c9d90ff96fedd!8m2!3d19.1386339!4d72.8451379">
+                <div class="map hoverable">
+                    <img class="india" src="assets/map.png" alt="">
+                </div>
+            </a>
         </div>
 
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/smooth-scrollbar.min.js"
+        integrity="sha512-DmxN+h4rvEbHxmkzhxEA1krRvgdzSFhjkcTe2HCZpd5ZnxP9+OWGHB8iMUQhvidmrivCTe3g0hyeMpfTLIwf7Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/main.js"></script>
+<script src="./js/main.js"></script>
 </body>
 
 </html>
