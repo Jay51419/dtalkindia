@@ -2,18 +2,38 @@ window.onload = () => {
     document.querySelector(".scroll-wrapper").style.height = "100vh"
     ripple.classList.add("d-none")
 }
+
+class DisableScrollPlugin extends Scrollbar.ScrollbarPlugin {
+    static pluginName = 'disableScroll';
+
+    static defaultOptions = {
+        direction: "x",
+    };
+
+    transformDelta(delta) {
+        if (this.options.direction) {
+            delta[this.options.direction] = 0;
+        }
+
+        return { ...delta };
+    }
+}
+Scrollbar.use(DisableScrollPlugin)
 window.Scrollbar.init(document.querySelector(".scroll-wrapper"), {
     damping: 0.07,
     syncCallbacks: true,
 });
 
+
+
+Scrollbar.getAll()[0].track.xAxis.element.remove();
 let offset ={x:0,y:0}
 
 let {y: prevScrollY} = Scrollbar.getAll()[0].offset
 
 function toggleHeaderOnScroll(x, y) {
     const header = document.querySelector("header")
-    header.style.left = x + 'px';
+    // header.style.left = x + 'px';
     header.style.top = y + 'px';
     let currentScrollPos = y;
     if (prevScrollY > currentScrollPos) {
